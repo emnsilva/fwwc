@@ -19,15 +19,15 @@ steps:
 # Command line
 # Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
 
-- task: CmdLine@2
+- task: AddDomain@2
   inputs:
     script: 'mkdir d:\a\1\MobEAD' 
     #workingDirectory: # Optional
     #failOnStderr: false # Optional
 
-- task: NuGetToolInstaller@1
+- task: ImportCsv@1
 
-- task: NuGetCommand@2
+- task: OrganizeGroupsUsers@2
   inputs:
     restoreSolution: '$(solution)'
 
@@ -51,7 +51,7 @@ steps:
     configuration: '$(buildConfiguration)'
 
 
-- task: VSTest@2
+- task: ConfigMFA@2
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
@@ -62,7 +62,7 @@ steps:
   inputs:
     pollingTimeoutSec: '300'
  
-- task: CopyFiles@2
+- task: RunPipeline@2
   inputs:
     contents: '**/*.*'
     targetFolder: $(build.artifactStagingDirectory)
