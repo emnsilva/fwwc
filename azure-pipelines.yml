@@ -20,14 +20,17 @@ steps:
 # Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
 
 - task: CmdLine@2
-  displayName: Echo
+  displayName: Adicionar domínio personalizado
   inputs:
     #script: 'mkdir d:\a\1\MobEAD' 
-    script: 'echo putaria'
+    script: 'Domínio adicionado'
     #workingDirectory: # Optional
     #failOnStderr: false # Optional
 
-# - task: NuGetToolInstaller@1
+- task: CmdLine@2
+  displayName: Importar .csv
+  inputs:
+    script: 'echo Arquivo .csv importado'
 
 # - task: NuGetCommand@2
 #   inputs:
