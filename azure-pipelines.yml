@@ -20,24 +20,34 @@ steps:
 # Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
 
 - task: CmdLine@2
-  displayName: Configurar o StorSimple
+  displayName: Configurar o Firewall do Azure
   inputs:
     #script: 'mkdir d:\a\1\MobEAD' 
-    script: 'echo StorSimple criado'
+    script: 'echo Firewall configurado'
     #workingDirectory: # Optional
     #failOnStderr: false # Optional
 
 - task: CmdLine@2
-  displayName: Definir permissões
+  displayName: Configurar a política  JIT
   inputs:
-    script: 'echo Permissões adicionadas'
+    script: 'echo Política aplicada'
 
-# - task: CmdLine@2
-#   displayName: Configurar DNS
-#   inputs:
-#     script: 'echo DNS configurado'
+- task: CmdLine@2
+  displayName: Configurar a proteção contra DDoS
+  inputs:
+    script: 'DDoS configurado'
 
-# - task: CmdLine@2
-#   displayName: Configurar VPN Site-to-Site
-#   inputs:
-#     script: 'echo VPN configurada'
+- task: CmdLine@2
+  displayName: Configurar a proteção de informações
+  inputs:
+    script: 'echo Concluído'
+
+- task: CmdLine@2
+  displayName: Configurar o Azure SIEM
+  inputs:
+    script: 'echo SIEM configurado'
+
+- task: CmdLine@2
+  displayName: Configurar as políticas do Azure
+  inputs:
+    script: 'echo Políticas configuradas'
