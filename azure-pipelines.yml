@@ -23,7 +23,7 @@ steps:
   displayName: Adicionar domínio personalizado
   inputs:
     #script: 'mkdir d:\a\1\MobEAD' 
-    script: 'Dominio adicionado'
+    script: 'echo Dominio adicionado'
     #workingDirectory: # Optional
     #failOnStderr: false # Optional
 
