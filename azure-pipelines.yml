@@ -41,8 +41,3 @@ steps:
   displayName: Configurar autenticação multifator
   inputs:
     script: 'echo MFA configurado'
-
-- task: CmdLine@2
-  displayName: Configurar autenticação multifator
-  inputs:
-    script: 'echo MFA configurado'
