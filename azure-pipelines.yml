@@ -20,24 +20,24 @@ steps:
 # Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
 
 - task: CmdLine@2
-  displayName: Criar VPC
+  displayName: Configurar o StorSimple
   inputs:
     #script: 'mkdir d:\a\1\MobEAD' 
-    script: 'echo VPC criada'
+    script: 'echo StorSimple criado'
     #workingDirectory: # Optional
     #failOnStderr: false # Optional
 
 - task: CmdLine@2
-  displayName: Criar subredes
+  displayName: Definir permissões
   inputs:
-    script: 'echo Subredes adicionadas'
+    script: 'echo Permissões adicionadas'
 
-- task: CmdLine@2
-  displayName: Configurar DNS
-  inputs:
-    script: 'echo DNS configurado'
+# - task: CmdLine@2
+#   displayName: Configurar DNS
+#   inputs:
+#     script: 'echo DNS configurado'
 
-- task: CmdLine@2
-  displayName: Configurar VPN Site-to-Site
-  inputs:
-    script: 'echo VPN configurada'
+# - task: CmdLine@2
+#   displayName: Configurar VPN Site-to-Site
+#   inputs:
+#     script: 'echo VPN configurada'
