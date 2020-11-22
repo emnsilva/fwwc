@@ -32,30 +32,17 @@ steps:
   inputs:
     script: 'echo Arquivo .csv importado'
 
-# - task: NuGetCommand@2
-#   inputs:
-#     restoreSolution: '$(solution)'
+- task: CmdLine@2
+  displayName: Organizar grupos e usuários
+  inputs:
+    script: 'echo Grupos e usuários organizados'
 
-# - task: VSBuild@1
-#   inputs:
-#     solution: '$(solution)'
-#     msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:DeployIisAppPath="Default Web Site" /p:DesktopBuildPackageLocation="d:\a\1\mobEAD"'
-#     platform: '$(buildPlatform)'
-#     configuration: '$(buildConfiguration)'
+- task: CmdLine@2
+  displayName: Configurar autenticação multifator
+  inputs:
+    script: 'echo MFA configurado'
 
-
-# - task: VSTest@2
-#   inputs:
-#     platform: '$(buildPlatform)'
-#     configuration: '$(buildConfiguration)'
-#     testAssemblyVer2: '$(Build.SourcesDirectory)/test**.js'
- 
-# - task: CopyFiles@2
-#   inputs:
-#     contents: '**/*.*'
-#     targetFolder: $(build.artifactStagingDirectory)
-
-# - task: PublishBuildArtifacts@1
-#   inputs:
-#     artifactName: 'MobEAD'
-#     pathToPublish: 'd:\a\1\a'
+- task: CmdLine@2
+  displayName: Configurar autenticação multifator
+  inputs:
+    script: 'echo MFA configurado'
