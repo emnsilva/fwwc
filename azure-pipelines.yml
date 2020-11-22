@@ -20,24 +20,24 @@ steps:
 # Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
 
 - task: CmdLine@2
-  displayName: Adicionar domínio personalizado
+  displayName: Criar VPC
   inputs:
     #script: 'mkdir d:\a\1\MobEAD' 
-    script: 'echo Dominio adicionado'
+    script: 'echo VPC criada'
     #workingDirectory: # Optional
     #failOnStderr: false # Optional
 
 - task: CmdLine@2
-  displayName: Importar .csv
+  displayName: Criar subredes
   inputs:
-    script: 'echo Arquivo .csv importado'
+    script: 'echo Subredes adicionadas'
 
 - task: CmdLine@2
-  displayName: Organizar grupos e usuários
+  displayName: Configurar DNS
   inputs:
-    script: 'echo Grupos e usuários organizados'
+    script: 'echo DNS configurado'
 
 - task: CmdLine@2
-  displayName: Configurar autenticação multifator
+  displayName: Configurar VPN Site-to-Site
   inputs:
-    script: 'echo MFA configurado'
+    script: 'echo VPN configurada'
